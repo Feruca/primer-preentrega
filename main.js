@@ -11,7 +11,13 @@ while(pregunta !== "si" && pregunta !== "sí" && pregunta !== "no"){
 
 if (pregunta === "si" || pregunta === "sí") {
     cantidadPersonas = parseInt(prompt("Ingrese la cantidad de personas"))
+    while(isNaN(cantidadPersonas)){
+        cantidadPersonas = parseInt(prompt("Ingrese la cantidad de personas(SOLO NUMEROS)"))
+    }
     cuenta = parseInt(prompt("Ingrese el monto de la cuenta"))
+    while(isNaN(cuenta)){
+        cuenta = parseInt(prompt("Ingrese el monto de la cuenta(SOLO NUMEROS)"))
+    }
     alert("Cada uno tiene que poner: " + calcularVacaPorigual(cuenta, cantidadPersonas))
 }else if(pregunta === "no"){
     alert("Esta bien, hasta luego:(")
